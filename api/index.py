@@ -2,13 +2,13 @@ import json
 from http.server import BaseHTTPRequestHandler
 import urllib.parse
 
-Load student data from the JSON file
+# Load student data from the JSON file
 def load_data():
     with open('q-vercel-python.json', 'r') as file:
         data = json.load(file)
     return data
 
-Handler class to process incoming requests
+# Handler class to process incoming requests
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         # Parse the query parameters
